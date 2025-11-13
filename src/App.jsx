@@ -47,7 +47,7 @@ function App() {
         <input type="text" className="form-control" name='body' placeholder='Inserisci il testo del post' value={formData.body} onChange={handleFormData} />
       </div>
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" name='public' checked={formData.public} />
+        <input type="checkbox" class="form-check-input" name='public' checked={formData.public} onChange={(e) => setFormData({ ...formData, public: e.target.checked })} />
         <label className="form-check-label">post pubblico</label>
 
       </div>
