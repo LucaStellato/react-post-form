@@ -3,6 +3,8 @@ import './App.css'
 import axios from 'axios'
 const endpoint_server = 'https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts'
 
+endpoint_server.post(endpoint, formData)
+
 function App() {
   const [formData, setFormData] = useState({
     author: '',
