@@ -3,7 +3,7 @@ import './App.css'
 import axios from 'axios'
 const endpoint_server = 'https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts'
 
-endpoint_server.post(endpoint, formData)
+
 
 function App() {
   const [formData, setFormData] = useState({
@@ -25,6 +25,13 @@ function App() {
     e.preventDefault()
     console.log(formData)
   }
+
+  axios.post(endpoint_server, formData, {
+    headers: { 'Content-Type': 'application/json' }
+  })
+    .then(response => {
+      console.log(response)
+    })
 
   return (
     <form onSubmit={handleSubmit}>
