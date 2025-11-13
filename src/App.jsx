@@ -10,21 +10,24 @@ function App() {
 
   });
   function handleFormData(e) {
+    const [name, type, value] = e.target
+    console.log(e.target.name)
+    console.log[name, type, value]
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: e.target.value
     });
   }
 
   return (
     <form>
-      <div class="mb-3">
+      <div className="mb-3">
         <input type="text" className="form-control" name='author' placeholder='inserisci nome autore' value={formData.name} onChange={handleFormData} />
       </div>
-      <div class="mb-3">
+      <div className="mb-3">
         <input type="text" className="form-control" name='title' placeholder='Titolo del post' value={formData.title} onChange={handleFormData} />
       </div>
-      <div class="mb-3">
+      <div className="mb-3">
         <input type="text" className="form-control" name='body' placeholder='Inserisci il testo del post' value={formData.body} onChange={handleFormData} />
       </div>
 
