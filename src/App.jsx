@@ -17,13 +17,14 @@ function App() {
       [name]: e.target.value
 
     });
-    console.log({
-      ...formData, [name]: value
-    })
+  }
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(formData)
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <input type="text" className="form-control" name='author' placeholder='inserisci nome autore' value={formData.name} onChange={handleFormData} />
       </div>
