@@ -10,7 +10,7 @@ function App() {
     author: '',
     title: '',
     body: '',
-    public: 'true'
+    public: true
 
 
   });
