@@ -24,14 +24,15 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault()
     console.log(formData)
+    axios.post(endpoint_server, formData, {
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(response => {
+        console.log(response)
+      })
+
   }
 
-  axios.post(endpoint_server, formData, {
-    headers: { 'Content-Type': 'application/json' }
-  })
-    .then(response => {
-      console.log(response)
-    })
 
   return (
     <form onSubmit={handleSubmit}>
