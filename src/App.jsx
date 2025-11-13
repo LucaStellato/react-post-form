@@ -10,9 +10,9 @@ function App() {
 
   });
   function handleFormData(e) {
-    const [name, type, value] = e.target
-    console.log(e.target.name)
-    console.log[name, type, value]
+    const { name, type, value } = e.target
+    console.dir(e.target)
+    console.log(name, type, value)
     setFormData({
       ...formData,
       [name]: e.target.value
