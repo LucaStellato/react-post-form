@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import axios from 'axios'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -11,12 +12,14 @@ function App() {
   });
   function handleFormData(e) {
     const { name, type, value } = e.target
-    console.dir(e.target)
-    console.log(name, type, value)
     setFormData({
       ...formData,
       [name]: e.target.value
+
     });
+    console.log({
+      ...formData, [name]: value
+    })
   }
 
   return (
