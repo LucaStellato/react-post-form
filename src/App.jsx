@@ -19,13 +19,13 @@ function App() {
   return (
     <form>
       <div class="mb-3">
-        <input type="text" className="form-control" name='author' placeholder='inserisci nome autore' />
+        <input type="text" className="form-control" name='author' placeholder='inserisci nome autore' value={formData.name} onChange={handleFormData} />
       </div>
       <div class="mb-3">
-        <input type="text" className="form-control" name='title' placeholder='Titolo del post' />
+        <input type="text" className="form-control" name='title' placeholder='Titolo del post' value={formData.title} onChange={handleFormData} />
       </div>
       <div class="mb-3">
-        <input type="text" className="form-control" name='body' placeholder='Inserisci il testo del post' />
+        <input type="text" className="form-control" name='body' placeholder='Inserisci il testo del post' value={formData.body} onChange={handleFormData} />
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
